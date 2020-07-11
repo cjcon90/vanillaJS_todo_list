@@ -12,6 +12,7 @@
     grid-template-areas:
       "check text edit"
       "check text delete";
+    padding-bottom: 3rem;
 
     &--checkbox,
     .checkmark {

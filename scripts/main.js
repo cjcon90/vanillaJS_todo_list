@@ -44,7 +44,7 @@ const createNewTask = (newTaskText) => {
   let editText = document.createTextNode("Edit");
   edit.appendChild(editText);
   container.appendChild(edit);
-  // add Event Listener to checkbox to move to completed section if checked, or todo if unchecked
+  // add Event Listener to edit buttons
   edit.addEventListener("click", function () {
     editTask(edit.parentNode);
   });

@@ -1,0 +1,40 @@
+.section {
+  &__add {
+    display: grid;
+    grid-template-columns: 77.5% 20%;
+    gap: 2.5%;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 12.5% 67.5% 20%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "check text edit"
+      "check text delete";
+
+    &--checkbox,
+    .checkmark {
+      grid-area: check;
+      justify-self: left;
+      align-self: center;
+    }
+
+    &--text {
+      grid-area: text;
+      justify-self: left;
+      align-self: center;
+      font-size: 2.5rem;
+      color: $color-accent;
+      pointer-events: none;
+    }
+
+    &--edit {
+      grid-area: edit;
+    }
+
+    &--delete {
+      grid-area: delete;
+    }
+  }
+}

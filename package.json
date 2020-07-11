@@ -1,0 +1,20 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "to-do list created using vanilla JS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss styles/style.css -w"
+  },
+  "keywords": [
+    "todo",
+    "javascript",
+    "sass",
+    "css"
+  ],
+  "author": "Ciaran Concannon",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

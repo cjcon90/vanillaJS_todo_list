@@ -1,0 +1,197 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block; }
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+html {
+  font-size: 50%; }
+  @media only screen and (min-width: 37.5em) {
+    html {
+      font-size: 60%; } }
+
+body {
+  background-color: #090720;
+  max-width: 600px;
+  margin: auto; }
+
+.header {
+  padding: 4rem 0; }
+  @media only screen and (min-width: 37.5em) {
+    .header {
+      padding: 8rem 0; } }
+  .header__heading {
+    display: block;
+    width: 70%;
+    margin: auto;
+    background-color: #d8d401;
+    box-shadow: 0 0 2rem rgba(216, 212, 1, 0.5);
+    border-radius: 0.3rem; }
+    .header__heading--text {
+      text-align: center;
+      font-size: 3.5rem;
+      text-transform: uppercase;
+      color: #090720; }
+
+section {
+  padding: 1rem 1rem; }
+
+.section__heading {
+  border-bottom: solid 0.2rem #d8d401;
+  margin: 2rem 0; }
+  .section__heading--text {
+    color: #d8d401;
+    font-size: 3rem; }
+
+.section__add {
+  display: grid;
+  grid-template-columns: 75% 25%; }
+  .section__add--input {
+    border: 0.1rem solid #d8d401;
+    font-size: 2.5rem;
+    background-color: #090720;
+    outline: none;
+    color: #d8d401; }
+    .section__add--input:hover, .section__add--input:focus {
+      box-shadow: 0 0 2rem rgba(216, 212, 1, 0.5); }
+
+.section--text {
+  font-size: 2.5rem;
+  color: #d8d401; }
+
+input[type="text"] {
+  border: 0.1rem solid #d8d401;
+  font-size: 2.5rem;
+  background-color: #090720;
+  outline: none;
+  color: #d8d401;
+  border-radius: 0.3rem; }
+  input[type="text"]:hover, input[type="text"]:focus {
+    box-shadow: 0 0 2rem rgba(216, 212, 1, 0.5); }
+
+.btn {
+  justify-self: center;
+  align-self: center;
+  color: #d8d401;
+  font-size: 2rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+  margin: 0.2rem; }
+  .btn:hover {
+    border: solid 0.2rem #d8d401;
+    margin: 0; }
+  .btn:active {
+    background-color: #d8d401;
+    color: #090720; }
+
+.section__container {
+  background-color: #090720; }
+  .section__container--checkbox:checked ~ .checkmark {
+    background-color: #d8d401; }
+    .section__container--checkbox:checked ~ .checkmark::after {
+      border-right: 0.5rem solid #090720;
+      border-bottom: 0.5rem solid #090720;
+      box-shadow: 0 0 2rem rgba(216, 212, 1, 0.5); }
+  .section__container--checkbox:checked ~ .section--text {
+    text-decoration: line-through; }
+  .section__container .checkmark {
+    position: relative;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background-color: #090720;
+    border: 0.1rem solid #d8d401;
+    border-radius: 0.3rem;
+    transition: all 0.4s; }
+    .section__container .checkmark::after {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1.5rem;
+      border-right: 0.5rem solid #d8d401;
+      border-bottom: 0.5rem solid #d8d401;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotateZ(40deg); }
+
+.section__add {
+  display: grid;
+  grid-template-columns: 77.5% 20%;
+  gap: 2.5%; }
+
+.section__container {
+  display: grid;
+  grid-template-columns: 12.5% 67.5% 20%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "check text edit" "check text delete"; }
+  .section__container--checkbox,
+  .section__container .checkmark {
+    grid-area: check;
+    justify-self: left;
+    align-self: center; }
+  .section__container--text {
+    grid-area: text;
+    justify-self: left;
+    align-self: center;
+    font-size: 2.5rem;
+    color: #d8d401;
+    pointer-events: none; }
+  .section__container--edit {
+    grid-area: edit; }
+  .section__container--delete {
+    grid-area: delete; }
